@@ -24,22 +24,47 @@
 # Input: list1 = ["KFC"], list2 = ["KFC"]
 # Output: ["KFC"]
 
-def min(lst1,lst2):
-    lst3 = list(set(lst1).intersection(lst2))
-    sums = []
-    lowest = None
-    x = 0
-    while x < len(lst3):
-        if lst3[x] in lst1 and lst3[x] in lst2:
-            if not lowest:
-                lowest = (lst1.index(lst3[x]),lst2.index(lst3[x]))
-                sums.append(lowest)
-            else:
-                if lowest[0] + lowest[1] >= lst1.index(lst3[x]) + lst2.index(lst3[x]):
-                    lowest = (lst1.index(lst3[x]),lst2.index(lst3[x]))
-                    sums.append(lowest)
-        x += 1
+# def min(lst1,lst2):
+#     lst3 = list(set(lst1).intersection(lst2))
+#     sums = []
+#     lowest = None
+#     x = 0
+#     while x < len(lst3):
+#         if lst3[x] in lst1 and lst3[x] in lst2:
+#             if not lowest:
+#                 lowest = (lst1.index(lst3[x]),lst2.index(lst3[x]))
+#                 sums.append(lowest)
+#             else:
+#                 if lowest[0] + lowest[1] >= lst1.index(lst3[x]) + lst2.index(lst3[x]):
+#                     lowest = (lst1.index(lst3[x]),lst2.index(lst3[x]))
+#                     sums.append(lowest)
+#         x += 1
         
-    return [lst3[sum[0]] for sum in sums]
+#     return [lst3[sum[0]] for sum in sums]
         
-print(min(["Shogun","Tapioca Express","Burger King","KFC"],["KFC","Burger King","Tapioca Express","Shogun"]))
+# print(min(["Shogun","Tapioca Express","Burger King","KFC"],["KFC","Burger King","Tapioca Express","Shogun"]))
+
+# Find the least positive integer thats not in the list
+
+ # example 1:
+# list1 = [1, 2, 1, 3, 4, 6]
+# ouput = 5
+
+# list2 = [1, 2, 3]
+# output = 4
+
+# list3 = [-1, -2, -4]
+# ouput = 1
+
+def least(lst):
+    a = 0
+    lst = list(set(sorted(lst)))
+    [1,2,3,4,6]
+    print(lst)
+    for i in lst:
+        if i >=0 and i == a+1:
+            a = i
+            
+    return a+1
+
+print(least([1,4])) 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<title>F1 Racer</title>
+</head>
+<body>
+    <section class="container">
+        <div class="row">
+            <form id="f1-form">
+                <div class="input-group form-group">
+                    <label for="season">Season</label>
+                    <input type="text" class="form-control" id="sea" name="season" placeholder="Enter Season" required>
+                    <label for="round">Round</label>
+                    <input type="text" class="form-control" id="rou" name="round" placeholder="Enter Round" required>                   
+                </div>
+                                  
+                <button class="btn btn-primary" type="submit" id="result7">Show 7 Results</button>
+                
+            </form>
+        </div>
+        <div class="table">
+            <div class="row labels">
+                <div class="col-md-2">
+                    Position
+                </div>
+                <div class="col-md-2">
+                    Name
+                </div>
+                <div class="col-md-2">
+                    Nationality
+                </div>
+                <div class="col-md-2">
+                   Sponsor
+                </div>
+                <div class="col-md-2">
+                    Points
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
