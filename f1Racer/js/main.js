@@ -1,7 +1,13 @@
 const getF1 = async (season,round) =>{
-    let res = await axios.get(`https://ergast.com/api/f1/${season}/${round}/driverStandings.json`)
-    console.log(res.data)
-    return res.data
+    try {
+        let res = await axios.get(`https://ergast.com/api/f1/${season}/${round}/driverStandings.json`)
+        if (res.status == 200){
+            console.log(res.data)
+            return res.data
+        } 
+    } catch(err) {
+        alert(err)
+    }
 }
 
 const newRow = (pos,name,nationality,sponsor,points) => {
@@ -80,6 +86,7 @@ showall.addEventListener('click',async (event) => {
 
     
     let res = await getF1(season,round)
+
     console.log(res)
     if (res.MRData.StandingsTable.StandingsLists.length > 0){
         for (let i = 0; i < res.MRData.StandingsTable.StandingsLists[0].DriverStandings.length; i++) {
